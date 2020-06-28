@@ -35,7 +35,20 @@ after that, install the packages in requirements.txt to make sure you have every
 pip install -r requirements.txt
 ```
 
-finally, set up mongoDB, you can easily do this using laragon if your os is windows
+finally, set up mongoDB, you can easily do this using laragon if your os is windows, then, do the migrations
+
+```
+py manage.py makemigrations
+py manage.py migrate
+```
+
+now you can run it
+
+```
+py manage.py runserver
+```
+
+Navigate to localhost:8000/admin or localhost:8000/swagger and explore
 
 ## Authors
 
