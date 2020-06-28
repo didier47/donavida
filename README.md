@@ -29,7 +29,7 @@ pip install virtualenvwrapper-win
 mkvirtualenv <name_you_desire>
 ```
 
-after that, install the packages on requirements.txt to make sure you have everything
+after that, install the packages in requirements.txt to make sure you have everything needed
 
 ```
 pip install -r requirements.txt
