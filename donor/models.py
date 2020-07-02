@@ -6,5 +6,5 @@ from user.models import UserModel
 class DonorModel(UserModel):
     identification = models.CharField(max_length=100)
     birth_date = models.DateField()
-    phone = models.CharField(max_length=100, null=True)
-    address = models.CharField(max_length=100, null=True)
+    phone = models.CharField(max_length=100, blank=True)
+    address = models.CharField(max_length=100, blank=True)
