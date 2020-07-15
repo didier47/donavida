@@ -38,7 +38,6 @@ pip install -r requirements.txt
 finally, set up mongoDB, you can easily do this using laragon if your os is windows, then, do the migrations
 
 ```
-py manage.py makemigrations
 py manage.py migrate
 ```
 
@@ -49,6 +48,12 @@ py manage.py runserver
 ```
 
 Navigate to localhost:8000/admin or localhost:8000/swagger and explore
+
+Note: you will need user credentials, make sure to create an user with
+
+```
+py manage.py createuser
+```
 
 ## Authors
 
