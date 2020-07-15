@@ -6,7 +6,6 @@ from rest_framework import permissions
 from rest_framework.routers import SimpleRouter
 
 from donor.views import DonorViewSet
-from user.views import UserViewSet
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -20,9 +19,10 @@ schema_view = get_schema_view(
 
 router = SimpleRouter()
 router.register('donor', DonorViewSet)
-router.register('user', UserViewSet)
 
 urlpatterns = [
-    url(r'api/', include(router.urls)),
+    url(r'^api/', include(router.urls)),
+    url(r'^auth/', include('djoser.urls')),
+    url(r'^auth/', include('djoser.urls.authtoken')),
     url(r'^swagger/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui')
 ]
