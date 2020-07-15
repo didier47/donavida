@@ -105,6 +105,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_URL = '/auth/login/'
+
+LOGOUT_URL = '/auth/logout/'
+
 CORS_ORIGIN_ALLOW_ALL = True
 
 # Internationalization
