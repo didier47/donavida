@@ -26,6 +26,17 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'DRF Token': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
+    },
+    'USE_SESSION_AUTH': False
+}
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -36,6 +47,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+    'rest_framework.authtoken',
+    'djoser',
     'drf_yasg',
     'corsheaders',
     'donor',
@@ -70,6 +83,15 @@ TEMPLATES = [
         },
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
+}
 
 WSGI_APPLICATION = 'donavida.wsgi.application'
 
