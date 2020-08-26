@@ -1,4 +1,5 @@
 from rest_framework import viewsets, status
+from rest_framework.filters import OrderingFilter
 from rest_framework.response import Response
 
 from donor.models import DonorModel
@@ -9,6 +10,17 @@ from user.managers import CustomUserManager
 class DonorViewSet(viewsets.ModelViewSet):
     queryset = DonorModel.objects.all()
     serializer_class = DonorSerializer
+    filter_backends = [OrderingFilter]
+    ordering_fields = ['id',
+                       'email',
+                       'first_name',
+                       'last_name',
+                       'date_joined',
+                       'identification',
+                       'birth_date',
+                       'phone',
+                       'address']
+    ordering = ['email']
 
     def create(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
