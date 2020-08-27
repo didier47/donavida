@@ -21,5 +21,6 @@ class DonorSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             'password': {'write_only': True},
             'last_login': {'read_only': True, 'format': Constants.FORMAT_DATE_TIME},
-            'date_joined': {'read_only': True, 'format': Constants.FORMAT_DATE_TIME}
+            'date_joined': {'read_only': True, 'format': Constants.FORMAT_DATE_TIME},
+            'birth_date': {'format': Constants.FORMAT_DATE}
         }
