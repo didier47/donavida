@@ -1,4 +1,6 @@
 # DonaVida
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdidier47%2Fdonavida.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdidier47%2Fdonavida?ref=badge_shield)
+
 
 Backend project for blood donors made with Django Rest Framework and MongoDB.
 
@@ -62,3 +64,6 @@ py manage.py createuser
 ## License
 
 This project is licensed under the GNU General Public License v3.0 - see the LICENSE file for details
+
+
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdidier47%2Fdonavida.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdidier47%2Fdonavida?ref=badge_large)
